@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "PLay", sans-serif;
+}
+
+#navbar {
+    height: clamp(1px, 60px, 12vw);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    background-color: #08040c;
+    color: white;
+}
+
+#discord-icon {
+    width: auto;
+    height: 90%;
+    margin-left: 2%;
+    color: #5865f2;
+}
+
+#headers {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    white-space: nowrap;
+}
+
+#navbar h1 {
+    margin-left: 2%;
+    font-size: 30px;
+}
+
+#display-pic {
+    height: clamp(1px, 30px, 7vw);
+    width: clamp(1px, 30px, 7vw);
+    border: 1px solid #242930;
+    margin-right: 2%;
+    border-radius: 50%;
+    overflow: hidden;
+}
