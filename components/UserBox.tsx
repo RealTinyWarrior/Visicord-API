@@ -29,7 +29,8 @@ const UserBox = () => {
     const [pfp, setPfp] = useState("https://cdn3.emoji.gg/emojis/5666-nothing-was-found.png");
 
     useEffect(() => {
-        if (!localStorage.getItem("user") || !localStorage.getItem("profile-icon")) redirect("/login");
+        if (!localStorage.getItem("user") || !localStorage.getItem("profile-icon"))
+            location.href = `https://visicord.vercel.app/login`;
 
         setUser(JSON.parse(localStorage.getItem("user") || "{}"));
         setPfp(localStorage.getItem("profile-icon") || "");
