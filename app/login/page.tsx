@@ -11,7 +11,7 @@ export const metadata: Metadata = {
             "Visicord API, an application where you can easily test out discord api without having to code or joining a server! Just send a request and try out the api.",
         images: [
             {
-                url: "./logo.png",
+                url: "https://i.ibb.co/QJTksyv/login.png",
                 width: 1200,
                 height: 630,
             },
