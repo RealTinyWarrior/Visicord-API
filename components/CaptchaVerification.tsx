@@ -15,7 +15,7 @@ const CaptchaVerification = () => {
         <ReCAPTCHA
             sitekey="6LeUc_goAAAAAHE6NVePnpYSD0lin76Uk8iVe5c0"
             onChange={(e) => {
-                router.push(`/?code=${params.get("code")}&captcha=${e}`);
+                location.href = `/?code=${params.get("code")}&captcha=${e}`;
             }}
         />
     );
