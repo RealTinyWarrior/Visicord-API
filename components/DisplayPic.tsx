@@ -2,7 +2,6 @@
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { BiLogOut } from "react-icons/bi";
-import Link from "next/link";
 import Image from "next/image";
 
 const DisplayPic = ({ token }: { token: string | null }) => {
@@ -62,9 +61,9 @@ const DisplayPic = ({ token }: { token: string | null }) => {
                 <BiLogOut id="logout-icon" />
             </div>
 
-            <Link href="/me" id="display-pic" title="Your profile">
+            <div onClick={() => router.push("/me")} id="display-pic" title="Your profile">
                 <Image src={profileIcon} alt="User icon" height={30} width={30} />
-            </Link>
+            </div>
         </>
     );
 };
