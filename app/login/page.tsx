@@ -23,6 +23,8 @@ export const metadata: Metadata = {
         "Visicord API, an application where you can easily test out discord api without having to code or joining a server! Just send a request and try out the api.",
 };
 
+//Login page [static]
+
 const Login = () => {
     return (
         <>
