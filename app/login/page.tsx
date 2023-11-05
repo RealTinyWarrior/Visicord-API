@@ -6,7 +6,7 @@ import { FaDiscord } from "react-icons/fa";
 
 export const metadata: Metadata = {
     openGraph: {
-        title: "Me - Visicord API",
+        title: "Login - Visicord API",
         description:
             "Visicord API, an application where you can easily test out discord api without having to code or joining a server! Just send a request and try out the api.",
         images: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         ],
     },
 
-    title: "Me - Visicord API",
+    title: "Login - Visicord API",
     description:
         "Visicord API, an application where you can easily test out discord api without having to code or joining a server! Just send a request and try out the api.",
 };
