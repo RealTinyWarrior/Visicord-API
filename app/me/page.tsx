@@ -1,12 +1,13 @@
-import { FaDiscord } from "react-icons/fa";
-import MainBox from "@components/MainBox";
-import dynamic from "next/dynamic";
+import UserBox from "@components/UserBox";
+import { AiFillApi } from "react-icons/ai";
+import BotBox from "@components/BotBox";
 import { Metadata } from "next";
-import "@styles/home.css";
+import React from "react";
+import "@styles/me.css";
 
 export const metadata: Metadata = {
     openGraph: {
-        title: "Dashboard - Visicord API",
+        title: "Me - Visicord API",
         description:
             "Visicord API, an application where you can easily test out discord api without having to code or joining a server! Just send a request and try out the api.",
         images: [
@@ -18,28 +19,24 @@ export const metadata: Metadata = {
         ],
     },
 
-    title: "Dashboard - Visicord API",
+    title: "Me - Visicord API",
     description:
         "Visicord API, an application where you can easily test out discord api without having to code or joining a server! Just send a request and try out the api.",
 };
 
-const TokenManager = dynamic(() => import("@components/TokenManager"), { ssr: true });
-
-const Home = () => {
+const Profile = () => {
     return (
         <>
-            <nav id="navbar">
-                <div id="headers">
-                    <FaDiscord id="discord-icon" />
-                    <h1>Visicord API</h1>
+            <AiFillApi id="icon" />
+
+            <div id="container">
+                <div id="main">
+                    <UserBox />
+                    <BotBox />
                 </div>
-
-                <TokenManager />
-            </nav>
-
-            <MainBox />
+            </div>
         </>
     );
 };
 
-export default Home;
+export default Profile;

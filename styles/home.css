@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "PLay", sans-serif;
+    font-family: "Fira Code", monospace;
 }
 
 #navbar {
@@ -12,11 +12,12 @@
     width: auto;
     background-color: #08040c;
     color: white;
+    border-bottom: 2px solid #242930;
 }
 
 #discord-icon {
     width: auto;
-    height: 90%;
+    height: 80%;
     margin-left: 2%;
     color: #5865f2;
 }
@@ -30,6 +31,7 @@
 }
 
 #navbar h1 {
+    font-family: "Play", sans-serif;
     margin-left: 2%;
     font-size: 30px;
 }
@@ -37,8 +39,526 @@
 #display-pic {
     height: clamp(1px, 30px, 7vw);
     width: clamp(1px, 30px, 7vw);
-    border: 1px solid #242930;
-    margin-right: 2%;
+    border: 2px solid #242930;
+    margin-right: 3%;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: #100f1c;
+}
+
+#main-box {
+    height: 80vh;
+    margin-top: 25px;
+    background-color: #100f1c;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 500px;
+}
+
+#right-box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 24%;
+}
+
+#left-box {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+#request-box {
+    height: 107%;
+    width: 100%;
+    background-color: #0a050f;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#history-box {
+    height: 106.7%;
+    width: 100%;
+    background-color: #0a050f;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#post-header {
+    height: 10%;
+    width: 94%;
+    border: 2px solid #242930;
+    margin-top: 3%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgba(30, 30, 30, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+#version-select {
+    height: 70%;
+    width: 12%;
+    margin-left: 2%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+    background-color: #242930;
+    font-size: 110%;
+    cursor: pointer;
+    font-family: "Fira Code", sans-serif;
+}
+
+#pretty-text {
+    width: 100%;
+    position: relative;
+    right: 1.5px;
+    display: flex;
+    justify-content: center;
+    height: 91.5%;
+    align-items: center;
+    white-space: pre;
+}
+
+#pretty-text div {
+    width: 90.2%;
+    height: 88.5%;
+    border: 3px solid #242930;
+    overflow: auto;
+    font-family: "Fira Code", monospace;
+    font-size: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #070617;
+}
+
+#status {
+    height: 5.7%;
+    width: 22%;
+    float: right;
+    margin-right: 3.6%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 1%;
+    max-width: 150px;
+    padding-left: 2%;
+    padding-right: 2%;
+    white-space: nowrap;
+    border: 3px solid #0d0f12;
+}
+
+#status p {
+    font-family: "play", sans-serif;
+}
+
+#raw-text {
+    width: 100%;
+    position: relative;
+    right: 1.5px;
+    display: flex;
+    justify-content: center;
+    height: 91.5%;
+    align-items: center;
+}
+
+#raw-text div {
+    width: 90.2%;
+    height: 88.5%;
+    border: 3px solid #242930;
+    overflow: auto;
+    font-family: "Fira Code", monospace;
+    font-size: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #070617;
+}
+
+#responses {
+    height: 77.2%;
+    margin-top: 2%;
+    width: 94%;
+    border: 2px solid #242930;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: white;
+}
+
+#input {
+    height: 70%;
+    width: 65%;
+    margin-left: 2%;
+    padding-left: 5px;
+    color: white;
+    background-color: #242930;
+    font-size: 110%;
+    font-family: "play", sans-serif;
+}
+
+#send {
+    height: 75%;
+    width: 14%;
+    margin-left: 2%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    font-size: 110%;
+    background-color: #33b249;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Play", sans-serif;
+}
+
+#h-recent {
+    color: white;
+    font-size: 150%;
+    font-family: "Play", sans-serif;
+}
+
+#h-recent-cont {
+    height: 6%;
+    width: 94%;
+    border: 2px solid #242930;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+
+#loader {
+    animation: spin 1.5s infinite linear;
+    font-size: 180%;
+    margin-top: 2%;
+    margin-right: 3%;
+}
+
+#choose-visualizer {
+    height: 8%;
+    display: flex;
+    background-color: #242930;
+    width: 65%;
+    padding-right: 1%;
+    border-bottom-right-radius: 6px;
+    align-items: center;
+    max-width: 480px;
+    min-width: 40%;
+    padding-bottom: 2px;
+}
+
+#choose-visualizer div {
+    font-family: "play", sans-serif;
+    max-width: 150px;
+    height: 79.4%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0c091b;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-left: 8px;
+    min-width: 27%;
+    font-size: 80%;
+}
+
+#choose-visualizer div:hover {
+    filter: brightness(120%) !important;
+}
+
+#no-req {
+    height: 91.5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#api-route {
+    height: 5%;
+    padding: 0.5% 3% 0.5% 3%;
+    background-color: rgba(19, 0, 66, 0.8);
+    border-radius: 12px;
+    margin-bottom: 4%;
+    font-family: "Play", sans-serif;
+}
+
+#info-text {
+    font-size: 160%;
+    font-weight: bolder;
+    position: relative;
+    bottom: 3.6%;
+    font-family: "Play", sans-serif;
+}
+
+#route-cont {
+    height: 90%;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#route-cont::-webkit-scrollbar {
+    display: none;
+}
+
+#no-req-icon {
+    height: 20%;
+    width: 20%;
+    position: relative;
+    bottom: 3%;
+}
+
+#send:hover {
+    background-color: #45d45d;
+}
+
+.route-btn {
+    width: 95%;
+    background-color: #141517;
+    margin-top: 2.5%;
+    color: white;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: "Play", sans-serif;
+}
+
+.route-btn:hover {
+    filter: brightness(170%);
+}
+
+#logout {
+    height: clamp(1px, 27px, 6vw);
+    width: clamp(1px, 27px, 6vw);
+    border: 3px solid #242930;
+    position: relative;
+    right: 8px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#logout-icon {
+    height: 80%;
+    width: 80%;
+    position: relative;
+    right: 2px;
+    color: #576372;
+}
+
+.obj-main,
+.prop-master {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vobj-container {
+    width: 90.16%;
+    border: 3px solid #242930;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #070617;
+    right: 1.5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1.8%;
+}
+
+.vxt-container {
+    height: auto;
+    width: 95%;
+    border: 3px solid #242930;
+    display: flex;
+    backdrop-filter: brightness(120%);
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    margin-bottom: 1.3%;
+    border-radius: 4px;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.vxt-data {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+}
+
+.type-color {
+    color: #5aa6e4;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.vxt-functions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search,
+.copy {
+    height: 35px;
+    width: 35px;
+    border: 3px solid #2b3035;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-left: 3px;
+    cursor: pointer;
+    background-color: #100f1c;
+    color: white;
+    font-size: 130%;
+}
+
+.search:hover,
+.copy:hover {
+    background-color: #19182a;
+}
+
+#alldata-cont {
+    height: 88.5%;
+    width: 100%;
+}
+
+#alldata-cont2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-size: 90%;
+    top: 3%;
+    overflow-y: auto;
+}
+
+.display-logo {
+    height: 60px;
+    width: 60px;
+    border: 3px solid #2b3035;
+    border-radius: 3px;
+}
+
+.img-logo {
+    height: 100%;
+    width: 100%;
+}
+
+.ving-container {
+    width: 100%;
+    padding-left: 6px;
+    padding-right: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.type-color-v {
+    font-size: 80%;
+    display: flex;
+    align-items: center;
+    color: #5865f2;
+}
+
+.varr-container {
+    width: 89%;
+    border-radius: 7px;
+    border: 3px solid #242930;
+    padding: 2%;
+    backdrop-filter: brightness(120%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.propname-text {
+    width: auto;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1%;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 4px;
+}
+
+.typeof-vxt {
+    font-size: 80%;
+    color: #5865f2;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 900px) {
+    #main-box {
+        display: inline-block;
+        justify-content: center;
+    }
+
+    #right-box {
+        margin-top: 20px;
+    }
+
+    #history-box {
+        width: 93%;
+    }
+
+    #request-box {
+        width: 93%;
+    }
+
+    #right-box {
+        width: 100%;
+    }
+
+    #left-box {
+        width: 100%;
+    }
 }

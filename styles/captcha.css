@@ -1,0 +1,17 @@
+body {
+    overflow: hidden;
+    font-family: "Play", sans-serif;
+}
+
+p {
+    font-weight: bold;
+}
+
+#container {
+    height: 95vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
