@@ -5,7 +5,7 @@
 }
 
 #navbar {
-    height: clamp(1px, 60px, 12vw);
+    height: clamp(1px, 60px, 16vw);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -542,6 +542,30 @@ body {
         justify-content: center;
     }
 
+    #status {
+        font-size: 70%;
+    }
+
+    #input {
+        font-size: 85%;
+    }
+
+    #send {
+        font-size: 70%;
+    }
+
+    #api-route {
+        font-size: 75%;
+    }
+
+    .route-btn {
+        font-size: 90%;
+    }
+
+    #choose-visualizer div {
+        font-size: 70%;
+    }
+
     #right-box {
         margin-top: 20px;
     }
@@ -560,5 +584,13 @@ body {
 
     #left-box {
         width: 100%;
+    }
+
+    .vobj-container,
+    .vxt-container,
+    .vxt-data,
+    .varr-container,
+    .ving-container {
+        font-size: 92%;
     }
 }
