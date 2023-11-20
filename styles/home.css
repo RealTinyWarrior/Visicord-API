@@ -593,4 +593,12 @@ body {
     .ving-container {
         font-size: 92%;
     }
+
+    #pretty-text {
+        font-size: 92%;
+    }
+
+    #raw-text {
+        font-size: 92%;
+    }
 }
